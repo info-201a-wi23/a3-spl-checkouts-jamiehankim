@@ -5,7 +5,7 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+The analysis is about the trends of the five material types including Atlas, Audio book, Book, E-book, and Videodisc. It is really important to analyze the trends over time because it represents the preference of the reader. Moving with trends will lead to profit for the publishers and authors. What has happened in the past years gives an idea of what will happen in the future. The analysis will show the reader's preference of the books' types in each year and each month. The material type of books will be compared with the number of checkouts as well. 
 
 ### Summary Information
 
