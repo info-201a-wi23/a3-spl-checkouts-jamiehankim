@@ -35,3 +35,6 @@ max_ebooks <- spl_df %>% filter(CheckoutYear == "2022") %>%  filter(Checkouts ==
 # How did the checkout numbers of books change in 2022? 
 checkout <- spl_df %>% filter(CheckoutYear == "2022") %>% filter(MaterialType == "BOOK") %>% 
   group_by(CheckoutMonth) %>% summarize(total = sum(CheckoutMonth, na.rm = TRUE))
+
+checkout2 <- spl_df %>% filter(CheckoutYear == "2022") %>% filter(MaterialType == "ATLAS" | MaterialType == "AUDIOBOOK" | MaterialType == "BOOK" | MaterialType == "EBOOK" | MaterialType == "SOUNDDISC") %>% 
+  group_by(MaterialType) %>% summarize(total = sum(CheckoutMonth, na.rm = TRUE))
