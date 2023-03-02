@@ -1,7 +1,14 @@
 ---
-title: "A3: SPL Library Checkouts"
-output: html_document
+title: 'A3: SPL Library Checkouts'
+output:
+  pdf_document: default
+  html_document: default
 ---
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library("dplyr")
+library("ggplot2")
+```
 
 ### Introduction
 
@@ -9,7 +16,8 @@ The analysis is about the trends of the five material types including Atlas, Aud
 
 ### Summary Information
 
-
+One of the five values is the average number of checkouts for each material type. This shows what kind of books people prefer. The largest number is 4.761147 ("AUDIOBOOK"). Then, "EBOOK" with the number 3.4, 
+"BOOK" with the number of 2.8, "ATLAS" with the number of 2.5, and "VIDEODISC" with the number of 1.6 follow. The data shows that the type of book with the biggest number of checkouts is "EBOOK". This shows that the average number of checkouts and the type of book with the biggest number of checkouts are different. However, since the second largest number of the average number of checkouts is "EBOOK", it still makes sense. For the types of the smallest number of checkouts, there are more than one answer since there are multiple types of books that only have been checkout once. There were 51 types of books with the smallest number including AUDIOBOOK", "EBOOK", "BOOK", "SOUNDDISC", VIDEODISC", and etc. The month with the most checkouts for "EBOOK" in 2022 is "9" which is September. In 2022, the number of checktouts gradually increase as time goes. It starts at its minimum in January with the number of 88283 and ends at its maximum in December with the number of 945876. Also, in 2022, the total numbers of checkouts for each type of books are different. There were 6552065 checkouts for "BOOK" which is the largest number and there were 1266 checkouts for "ATLAS" which is the smallest number. By looking at the different numbers, you can get a sense of which type of books are more popular than the others. In this data, "BOOK", "EBOOK", and "AUDIOBOOK" seem more popular than "SOUNDDISC" and "ATLAS" in general. The number also help assume the trends of books over time.
 
 ### The Dataset
 
@@ -20,64 +28,29 @@ The parameters of the data are UsageClass, CheckoutType MaterialType, CheckoutYe
 - How was the data collected or generated?  
 The data was collected by the Seattle Public library. The data is categorized by the different parameters, which also contains information about how the different books have been checkouted throughout the years of 2022 and 2023.  
 - Why was the data collected?  
-The data was collected to see the different trends of books over time. The data allows the publisher and author 
-to know what kinds of books are more popular than the others and how many books got borrowed on a specific date. It also helps the system to keep track about the books at the library.
+The data was collected to see the different trends of books over time. The data allows the publisher and author to know what kinds of books are more popular than the others and how many books got borrowed on a specific date. It also helps the system to keep track about the books at the library.
 - What, if any, ethical questions do you need to consider when working with this data?
-
+I personally think there is no ethical questions when working with this data since there is no user's privacy or information stated. 
 - What are possible limitations or problems with this data?   (at least 200 words)
-There are some possible limitations with this data. 
+There are some possible limitations with this data. First of all, the years in the data set are only 2022 and 2023. If you were to find some trends for the types of books over 10 years, it is not possible since there is only one prior year. This does not allow you to find the trends over a large time period. Also, the months through January and December for 2022 are displayed in the data set, the only month that is displayed in the data set for 2023 is January. This means that the same months over years cannot be compared. For example, if you were to compare the patterns in Marches in both 2022 and 2023, it is not possible. You can only compare the months in 2023 or Januaries of 2022 and 2023. Additionally, the creators' or authors' names are differently stated. Some of them were stated with the last name first but other ones were stated with first names. Also, some of the names were lower-cased and others are upper-cased. This gives a little confusion when searching for the names. It would be also great if the names of the libraries are stated so the data could contain more details. 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The five types of books, atlas, audiobook, book, ebook, and sounddisc, are displayed as a bar chart. This is really important because the chart shows the number of checkouts over time (month). It is evident that the numbers of checkouts for each book do not change too much as time goes. The "BOOK" has been checkouted at the library with the largest number of checkouts throughout the year. The second largest number of checkouts is "EBOOK". Then, "AUDIOBOOK", "SOUNDDISC", and "ATLAS" follow. Although there is a difference between the number of checkouts for "BOOK" and "EBOOK", you can visually see that the difference is not too big. On the other hand, the difference between "BOOK" and "ATLAS" is huge. The data shows that the reader prefers "BOOK" the most and "ATLAS" the least constantly. I included this chart because it condenses large amounts of numbers into easy-to-understand format that clearly visualize the number of checkouts. 
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The chart shows the trends of checkouts from 2022 to 2023. The chart only contains data for the five values, books, atlas, audiobook, book, ebook, and sounddisc since I already filtered them. The overall number of checkouts in 2022 is 7755642 while the overall number of 2023 is 737020. That is why the slope is downhill. I wanted to represent that chart to show the overall number of checkouts over years. However, the data for 2023 is not enough compared to the data from 2022. That is why the chart is a steeply reduced chart. 
 
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+The last chart is a bar chart with the types of books in the x-axis and the number of total in the y-axis. The chart represents the sum of the checkouts for each material type. Although this chart looks similar to the first chart, the information that they contain is different. Unlike the first chart that demonstrates the number of checkouts per month, this one demonstrates the number of checkouts in total. The largest number of checkouts throughout the years in the data (2022 and 2023) is "BOOK". The second largest one is "EBOOK". Then, "AUDIOBOOK", "SOUNDDISC", and "ATLAS" follow the next. This means the preference stays the same as the preference in 2022 even after including the data from 2023. 
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, code = readLines("chart3_example.R")}
 ```
-
-
