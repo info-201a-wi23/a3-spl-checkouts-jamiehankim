@@ -1,8 +1,8 @@
 ---
 title: 'A3: SPL Library Checkouts'
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
@@ -16,7 +16,8 @@ The analysis is about the trends of the five material types including Atlas, Aud
 
 ### Summary Information
 
-One of the five values is the average number of checkouts for each material type. This shows what kind of books people prefer. The largest number is 4.761147 ("AUDIOBOOK"). Then, "EBOOK" with the number 3.4, "BOOK" with the number of 2.8, "ATLAS" with the number of 2.5, and "VIDEODISC" with the number of 1.6 follow. The data shows that the type of book with the biggest number of checkouts is "EBOOK". This shows that the average number of checkouts and the type of book with the biggest number of checkouts are different. However, since the second largest number of the average number of checkouts is "EBOOK", it still makes sense. For the types of the smallest number of checkouts, there are more than one answer since there are multiple types of books that only have been checkout once. There were 51 types of books with the smallest number including AUDIOBOOK", "EBOOK", "BOOK", "SOUNDDISC", VIDEODISC", and etc. The month with the most checkouts for "EBOOK" in 2022 is "9" which is September. In 2022, the number of checktouts gradually increase as time goes. It starts at its minimum in January with the number of 88283 and ends at its maximum in December with the number of 945876. Also, in 2022, the total numbers of checkouts for each type of books are different. There were 6552065 checkouts for "BOOK" which is the largest number and there were 1266 checkouts for "ATLAS" which is the smallest number. By looking at the different numbers, you can get a sense of which type of books are more popular than the others. In this data, "BOOK", "EBOOK", and "AUDIOBOOK" seem more popular than "SOUNDDISC" and "ATLAS" in general. The number also help assume the trends of books over time.
+One of the five values is the average number of checkouts for each material type. This shows what kind of books people prefer. The largest number is 4.761147 ("AUDIOBOOK"). Then, "EBOOK" with the number 3.4, 
+"BOOK" with the number of 2.8, "ATLAS" with the number of 2.5, and "VIDEODISC" with the number of 1.6 follow. The data shows that the type of book with the biggest number of checkouts is "EBOOK". This shows that the average number of checkouts and the type of book with the biggest number of checkouts are different. However, since the second largest number of the average number of checkouts is "EBOOK", it still makes sense. For the types of the smallest number of checkouts, there are more than one answer since there are multiple types of books that only have been checkout once. There were 51 types of books with the smallest number including AUDIOBOOK", "EBOOK", "BOOK", "SOUNDDISC", VIDEODISC", and etc. The month with the most checkouts for "EBOOK" in 2022 is "9" which is September. In 2022, the number of checktouts gradually increase as time goes. It starts at its minimum in January with the number of 88283 and ends at its maximum in December with the number of 945876. Also, in 2022, the total numbers of checkouts for each type of books are different. There were 6552065 checkouts for "BOOK" which is the largest number and there were 1266 checkouts for "ATLAS" which is the smallest number. By looking at the different numbers, you can get a sense of which type of books are more popular than the others. In this data, "BOOK", "EBOOK", and "AUDIOBOOK" seem more popular than "SOUNDDISC" and "ATLAS" in general. The number also help assume the trends of books over time.
 
 ### The Dataset
 
@@ -53,3 +54,5 @@ The last chart is a bar chart with the types of books in the x-axis and the numb
 
 ```{r, echo = FALSE, code = readLines("chart3_example.R")}
 ```
+
+

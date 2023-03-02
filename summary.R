@@ -38,3 +38,5 @@ checkout <- spl_df %>% filter(CheckoutYear == "2022") %>% filter(MaterialType ==
 
 checkout2 <- spl_df %>% filter(CheckoutYear == "2022") %>% filter(MaterialType == "ATLAS" | MaterialType == "AUDIOBOOK" | MaterialType == "BOOK" | MaterialType == "EBOOK" | MaterialType == "SOUNDDISC") %>% 
   group_by(MaterialType) %>% summarize(total = sum(CheckoutMonth, na.rm = TRUE))
+
+
